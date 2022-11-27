@@ -4,13 +4,21 @@ window.addEventListener("load", function() {
    let form = document.querySelector("form");
    form.addEventListener("submit", function(event) {
     let pilotNameInput = document.querySelector("input[name=pilotName]");
+    let pilot = pilotNameInput.value;
+
     let copilotNameInput = document.querySelector("input[name=copilotName]");
+    let copilot = copilotNameInput.value;
+
     let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
+    let fuelLevel = fuelLevelInput.value;
+
     let cargoMassInput = document.querySelector("input[name=cargoMass]");
-        if(pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value === "") {
-            alert("All fields are required!");
-            event.preventDefault();
-        };
+    let cargoLevel = cargoMassInput.value;
+    
+        // if(pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value === "") {
+        //     alert("All fields are required!");
+        //     event.preventDefault();
+        // };
    });
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
