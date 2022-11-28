@@ -18,7 +18,7 @@ window.addEventListener("load", function() {
     let cargoLevel = Number(cargoMassInput.value);
     
     formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
-    
+
     event.preventDefault();
    });
 

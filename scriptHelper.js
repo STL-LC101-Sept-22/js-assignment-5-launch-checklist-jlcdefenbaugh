@@ -23,7 +23,7 @@ function validateInput(testInput) {
         return "Not a Number";
     } else if(!(isNan(testInput))) {
         return "Is a Number";
-    }
+    };
 };
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
@@ -41,14 +41,14 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     list.style.visibility = "visible";
     pilotStatus.innerHTML = `Pilot ${pilot} is ready.`;
     copilotStatus.innerHTML = `Co-pilot ${copilot} is ready.`;
-    launchStatus.innerHTML = "Shuttle is ready for launch.";
-    launchStatus.style.backgroundcolor = "green";
         if(fuelLevel < 10000 && cargoLevel <= 10000) {
             fuelStatus.innerHTML = "There is not enough fuel for the journey!";
+            cargoStatus.innerHTML = "Cargo mass low enough for launch."
             launchStatus.innerHTML = "Shuttle is not ready for launch!";
             launchStatus.style.backgroundcolor = "red";
         } else if(cargoLevel > 10000 && fuelLevel >= 10000) {
             cargoStatus.innerHTML = "Too much mass for the shuttle to launch!";
+            fuelStatus.innerHTML = "Fuel level high enough for launch."
             launchStatus.innerHTML = "Shuttle is not ready for launch!";
             launchStatus.style.backgroundcolor = "red";
         } else if (fuelLevel < 10000 && cargoLevel > 10000) {
@@ -56,6 +56,11 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             cargoStatus.innerHTML = "Too much mass for the shuttle to launch!";
             launchStatus.innerHTML = "Shuttle is not ready for launch!";
             launchStatus.style.backgroundcolor = "red";
+        } else if (fuelLevel >= 10000 && cargoLevel <= 10000) {
+            fuelStatus.innerHTML = "Fuel level high enough for launch.";
+            cargoStatus.innerHTML = "Cargo mass low enough for launch.";
+            launchStatus.innerHTML = "Shuttle is ready for launch.";
+            launchStatus.style.backgroundcolor = "green";
         };
    };
 };
