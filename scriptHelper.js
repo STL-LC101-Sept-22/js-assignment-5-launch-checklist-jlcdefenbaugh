@@ -17,12 +17,11 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 }
 
 function validateInput(testInput) {
-    let numberInput = Number(testInput);
     if(testInput === "") {
         return "Empty";
-    } else if(isNaN(numberInput)) {
+    } else if(isNaN(testInput)) {
         return "Not a Number";
-    } else if(!(isNan(numberInput))) {
+    } else if(!(isNan(testInput))) {
         return "Is a Number";
     }
 };
@@ -57,9 +56,9 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             launchStatus.style.backgroundcolor = "red";
             pilotStatus.innerHTML = `Pilot ${pilot} is not ready.`;
             copilotStatus.innerHTML = `Co-pilot ${copilot} is not ready;`;
-        }
-   }
-}
+        };
+   };
+};
 
 async function myFetch() {
     let planetsReturned;
