@@ -13,7 +13,7 @@ listedPlanetsResponse.then(function (result) {
     console.log(listedPlanets);
 }).then(function () {
     console.log(listedPlanets);
-    console.log("function working")
+    // console.log("function working")
     // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
     let planet = pickPlanet(listedPlanets); 
  //    addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl)
