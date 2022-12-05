@@ -1,6 +1,4 @@
-// Write your JavaScript code here!
-
-const { formSubmission, addDestinationInfo } = require("./scriptHelper");
+// const { formSubmission, addDestinationInfo } = require("./scriptHelper");
 
 window.addEventListener("load", function() {  
     let list = document.getElementById("faultyItems");
@@ -10,7 +8,7 @@ window.addEventListener("load", function() {
 // Set listedPlanetsResponse equal to the value returned by calling myFetch()
 let listedPlanetsResponse = myFetch()
 listedPlanetsResponse.then(function (result) {
-    listedPlanets = result;
+    listedPlanets = result; //not defined in console - asynchronous - need to brush up on those functions, use then
     console.log(listedPlanets);
 }).then(function () {
     console.log(listedPlanets);
