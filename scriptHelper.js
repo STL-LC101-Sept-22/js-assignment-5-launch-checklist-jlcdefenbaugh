@@ -14,6 +14,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                         </ol>
                         <img src="${imageUrl}">`
 
+
    // Here is the HTML formatting for our mission target div.
    /*
                 <h2>Mission Destination</h2>
@@ -41,7 +42,7 @@ function validateInput(testInput) {
 };
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    console.log("this is running")
+    // console.log("this is running")
    let pilotStatus = document.getElementById("pilotStatus");
    let copilotStatus = document.getElementById("copilotStatus");
    let fuelStatus = document.getElementById("fuelStatus");
@@ -51,7 +52,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    if(validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
     alert("All fields are required!");
    } else if(validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
-    console.log("missing input")
+    // console.log("missing input")
     alert("Please enter valid information!");
    } else {
     list.style.visibility = "visible";
@@ -86,10 +87,6 @@ async function myFetch() {
 
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
         return response.json()
-        // .then(function(json) {
-        //     console.log(json)
-        //     console.log("myFetch")
-        // });
         });
 
     return planetsReturned;
